@@ -1,0 +1,23 @@
+{
+  "folders":
+    [
+      {
+        "path": "."
+      }
+    ],
+  "build_systems":
+    [
+      {
+        "name": "CMake",
+        "shell_cmd": "cmake -S . -B build && cmake --build build --target pre-run && ./client/build/MultiplayerChat-Client",
+        "working_dir": "${project_path}",
+        "variants": [
+          {
+            "name": "Build",
+            "shell_cmd": "cmake -S . -B build && cmake --build build"
+          }
+        ]
+      }
+
+    ]
+}
