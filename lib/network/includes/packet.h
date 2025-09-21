@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 
-#include "constants.h"
+#include "network_constants.h"
 #include "packet_type.h"
 
 typedef struct {
