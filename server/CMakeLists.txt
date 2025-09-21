@@ -4,5 +4,9 @@ set_target_properties(${PROJECT_NAME}_Server PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build"
 )
 
+target_include_directories(${PROJECT_NAME}_Server PRIVATE ${CMAKE_SOURCE_DIR}/lib/network/src)
+
 # Add Test Executable
 add_subdirectory(tests)
+
+target_link_libraries(${PROJECT_NAME}_Server PRIVATE NetworkLib)

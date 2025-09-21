@@ -6,3 +6,5 @@ set_target_properties(${PROJECT_NAME}_Client PROPERTIES
 
 # Add Test Executable
 add_subdirectory(tests)
+
+target_link_libraries(${PROJECT_NAME}_Client PRIVATE NetworkLib)

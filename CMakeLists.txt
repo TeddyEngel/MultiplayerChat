@@ -5,8 +5,9 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-# Unity Test Lib
 add_subdirectory(thirdparty/Unity)
+add_subdirectory(lib/system)
+add_subdirectory(lib/network)
 
 # Client
 add_subdirectory(client)
@@ -14,7 +15,7 @@ add_subdirectory(client)
 # Server
 add_subdirectory(server)
 
-# Enable testing
+# Testing
 enable_testing()
 add_test(NAME ClientTest COMMAND ${PROJECT_NAME}_TestClient)
 add_test(NAME ServerTest COMMAND ${PROJECT_NAME}_TestServer)
